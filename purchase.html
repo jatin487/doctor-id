@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchase Medicines</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f9f9f9;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      .medicine-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .medicine-item {
+        padding: 15px;
+        border: 2px solid #007bff;
+        border-radius: 8px;
+        background: linear-gradient(145deg, #ffffff, #e6e6e6);
+        box-shadow: 4px 4px 8px #d1d1d1, -4px -4px 8px #ffffff;
+        font-weight: bold;
+        font-size: 1.2em;
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .medicine-item:hover {
+        transform: scale(1.05);
+        box-shadow: 6px 6px 12px #c1c1c1, -6px -6px 12px #ffffff;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 1em;
+        font-weight: bold;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Purchase Medicines</h1>
+    </header>
+
+    <main>
+      <div class="medicine-list">
+        <div class="medicine-item" data-medicine="Paracetamol">
+          Medicine 1: Paracetamol
+        </div>
+        <div class="medicine-item" data-medicine="Amoxicillin">
+          Medicine 2: Amoxicillin
+        </div>
+        <div class="medicine-item" data-medicine="Ibuprofen">
+          Medicine 3: Ibuprofen
+        </div>
+      </div>
+
+      <button type="button" id="checkout-button">Proceed to Checkout</button>
+    </main>
+
+    <script>
+      // JavaScript functionality
+      const medicineItems = document.querySelectorAll(".medicine-item");
+      const checkoutButton = document.getElementById("checkout-button");
+      let selectedMedicines = [];
+
+      // Add click event to each medicine item
+      medicineItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const medicineName = item.getAttribute("data-medicine");
+          if (selectedMedicines.includes(medicineName)) {
+            // Remove medicine if already selected
+            selectedMedicines = selectedMedicines.filter(
+              (med) => med !== medicineName
+            );
+            item.style.borderColor = "#007bff";
+            item.style.background = "linear-gradient(145deg, #ffffff, #e6e6e6)";
+          } else {
+            // Add medicine to the selection
+            selectedMedicines.push(medicineName);
+            item.style.borderColor = "#28a745";
+            item.style.background = "linear-gradient(145deg, #e6ffe6, #ccffcc)";
+          }
+        });
+      });
+
+      // Add click event to the checkout button
+      checkoutButton.addEventListener("click", () => {
+        if (selectedMedicines.length > 0) {
+          alert(
+            `You have selected the following medicines:\n- ${selectedMedicines.join(
+              "\n- "
+            )}`
+          );
+        } else {
+          alert(
+            "Please select at least one medicine before proceeding to checkout."
+          );
+        }
+      });
+    </script>
+  </body>
+</html>

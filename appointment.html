@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment Details</title>
+    <link rel="stylesheet" href="appointment.css" />
+  </head>
+  <body>
+    <div class="appointment-container">
+      <h1>Appointment Details</h1>
+      <div class="patient-card">
+        <img src="patient1.jpg" alt="Patient" class="patient-image" />
+        <div class="patient-info">
+          <h2>KARTIK TYAGI</h2>
+          <p>Appointment Date: 5 Oct 2024</p>
+          <p>Time: 10:00 AM</p>
+          <p>Reason: General Checkup</p>
+        </div>
+        <div class="actions">
+          <a href="https://demo.videosdk.live/" class="accept-btn" onclick="acceptAppointment()">
+            Accept
+          </a>
+          <button class="reject-btn" onclick="rejectAppointment()">
+            Reject
+          </button>
+        
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function acceptAppointment() {
+        alert("Appointment Accepted!");
+      }
+
+      function rejectAppointment() {
+        alert("Appointment Rejected!");
+      }
+    </script>
+  </body>
+</html>

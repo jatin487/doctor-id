@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Dashboard - Prescripto</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome Icons -->
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>city hospital</h2>
+      <ul>
+        <li class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+        <li>
+          <i class="fas fa-calendar-check"></i
+          ><a href="appointment.html">Appointments</a>
+        </li>
+        <li>
+          <i class="fas fa-user-md"></i
+          ><a href="medical records.html">Patients</a>
+        </li>
+        <li><i class="fas fa-cogs"></i> Settings</li>
+        <li><i class="fas fa-sign-out-alt"></i> Logout</li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Topbar -->
+      <div class="topbar">
+        <h1>Welcome, Dr. Nishant Sangwan</h1>
+        <button class="logout-btn">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+      </div>
+
+      <!-- Stats Overview -->
+      <div class="stats">
+        <div class="stat-box">
+          <i class="fas fa-dollar-sign"></i>
+          <p>$80</p>
+          <span>Earnings</span>
+        </div>
+        <div class="stat-box">
+          <i class="fas fa-calendar-check"></i>
+          <p>4</p>
+          <span>Appointments</span>
+        </div>
+        <div class="stat-box">
+          <i class="fas fa-user"></i>
+          <p>2</p>
+          <span>Patients</span>
+        </div>
+      </div>
+
+      <!-- Latest Bookings -->
+      <div class="latest-bookings">
+        <h3>Latest Bookings</h3>
+        <div class="booking">
+          <p>Avinash Kr <span>Booking on 5 Oct 2024</span></p>
+          <span class="status canceled">Canceled</span>
+        </div>
+        <div class="booking">
+          <p>GreatStack <span>Booking on 26 Sep 2024</span></p>
+          <span class="status completed">Completed</span>
+        </div>
+        <div class="booking">
+          <p>GreatStack <span>Booking on 25 Sep 2024</span></p>
+          <span class="status completed">Completed</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

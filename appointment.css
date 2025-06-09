@@ -1,0 +1,74 @@
+/* Center the appointment container */
+.appointment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f6f9;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Style the patient card */
+.patient-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Style the patient image */
+.patient-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* Style the patient info */
+.patient-info h2 {
+  margin: 10px 0;
+  color: #333;
+}
+
+.patient-info p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Style the action buttons */
+.actions {
+  margin-top: 15px;
+}
+
+.accept-btn,
+.reject-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.accept-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.accept-btn:hover {
+  background-color: #218838;
+}
+
+.reject-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.reject-btn:hover {
+  background-color: #c82333;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Process</title>
+    <link rel="stylesheet" href="billing.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Appointment Billing</h1>
+        <form action="" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="appointment_date">Appointment Date</label>
+            <input type="date" id="appointment_date" name="appointment_date" required>
+
+            <label for="service">Service Type</label>
+            <select id="service" name="service" required>
+                <option value="General Consultation">General Consultation - $50</option>
+                <option value="Specialist Consultation">Specialist Consultation - $100</option>
+                <option value="Emergency Care">Emergency Care - $200</option>
+            </select>
+
+            <label for="payment_method">Payment Method</label>
+            <select id="payment_method" name="payment_method" required>
+                <option value="Credit Card">Credit Card</option>
+                <option value="Debit Card">Debit Card</option>
+                <option value="PayPal">PayPal</option>
+            </select>
+
+            <button type="submit">Submit Payment</button>
+        </form>
+    </div>
+</body>
+</html>
